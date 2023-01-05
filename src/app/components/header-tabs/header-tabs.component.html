@@ -1,0 +1,27 @@
+<mat-tab-group>
+  <mat-tab label="Dispacther Planning"> Content 1 </mat-tab>
+  <mat-tab label="Converter"> Content 2 </mat-tab>
+
+  <mat-tab label="Caster Entry">
+    <ng-template matTabContent>
+      <mat-tab-group>
+        <mat-tab *ngFor="let tab of preTabs" label="{{ tab.label }}">
+          <div *ngIf="tab.label === 'Caster Details'">
+            {{ tab.content }}
+          </div>
+          <div *ngIf="tab.label === 'Heat Under Running ID'">
+            {{ tab.content }}
+          </div>
+          <div *ngIf="tab.label === 'SOP Document'">
+            <!-- {{ tab.content }} -->
+            <mat-tab-group>
+              <mat-tab *ngFor="let tab of tabsData" label="{{ tab.label }}">{{
+                tab.label
+              }}</mat-tab>
+            </mat-tab-group>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
