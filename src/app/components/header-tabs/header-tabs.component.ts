@@ -10,9 +10,9 @@ export class HeaderTabsComponent implements OnInit {
   tabsData!: any[];
   constructor() {
     this.preTabs = [
-      { label: 'Caster Details', content: 'Content 1' },
-      { label: 'Heat Under Running ID', content: 'Content 2' },
-      { label: 'SOP Document', content: 'Content 3' },
+      { label: 'Caster Details', content: 'Content 4' },
+      { label: 'Heat Under Running ID', content: 'Content 5' },
+      { label: 'SOP Document', content: 'Content 6' },
     ];
     this.tabsData = [
       { label: 'Caster Details', content: 'Content 1' },

@@ -1,0 +1,183 @@
+<article class="article">
+  <div class="">
+    <div class="layout2-header1 fw-bold bg-text-banner p-3 mb-2">
+      Heat Production
+      <button
+        type="button"
+        class="btn btn-primary-custom btn-sm float-end fw-bold"
+      >
+        Grade
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary-custom btn-sm float-end mx-2 fw-bold"
+      >
+        save
+      </button>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="main-layout1 p-3">
+      <div class="form-layout">
+        <div class="form-layout-1">
+          <form>
+            <div class="row" *ngFor="let text of inputArray; index as i">
+              <div class="col-sm-4 mt-2">
+                <label>{{ text }}</label>
+              </div>
+              <div class="col-sm-7 mb-3">
+                <input type="text" class="form-control custom-color" />
+              </div>
+            </div>
+            <div class="pt-2 pb-2" *ngFor="let chk of arrayChecks">
+              <label class="col-sm-4 me-2">{{ chk }}</label>
+              <input class="form-check-input col-sm-7" type="checkbox" />
+            </div>
+          </form>
+        </div>
+        <div class="form-layout-2">
+          <form>
+            <div class="row" *ngFor="let text of inputArray">
+              <div class="col-sm-4 mt-2">
+                <label>{{ text }}</label>
+              </div>
+              <div class="col-sm-7 mb-3">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="pt-2 pb-2" *ngFor="let chk of arrayChecks">
+              <label class="col-sm-4 me-2">{{ chk }}</label>
+              <input class="form-check-input col-sm-7" type="checkbox" />
+            </div>
+          </form>
+        </div>
+        <div class="form-layout-3">
+          <form>
+            <div class="row" *ngFor="let text of inputArray">
+              <div class="col-sm-4 mt-2">
+                <label>{{ text }}</label>
+              </div>
+              <div class="col-sm-7 mb-3">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="pt-2 pb-2" *ngFor="let chk of arrayChecks">
+              <label class="col-sm-4 me-2">{{ chk }}</label>
+              <input class="form-check-input col-sm-7" type="checkbox" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-layout2">
+      <div class="main-layout2-content1 card">
+        <div class="layout2-header1 fw-bold bg-text-banner p-2 mb-3">
+          <i class="fas fa-print" style="font-size: 15px"></i>
+          Sample generate
+        </div>
+        <div class="d-grid gap-2 p-2">
+          <button class="btn btn-primary-custom fw-bold" type="button">
+            Generate Sample
+          </button>
+        </div>
+        <hr />
+        <div class="form-check form-check-reverse text-start me-4">
+          <input
+            class="form-check-input p-2"
+            type="radio"
+            value=""
+            id="reverseCheck1"
+            checked
+          />
+
+          <label class="form-check-label px-2" for="reverseCheck1">
+            SCUGGBB00989</label
+          >
+          <i
+            class="fas fa-print float-end pt-1 px-1"
+            style="font-size: 15px"
+          ></i>
+        </div>
+      </div>
+      <div class="main-layout2-content2 card mt-3 mb-3">
+        <div class="layout2-header1 fw-bold bg-text-banner p-2 mb-3">
+          Abnormality
+        </div>
+        <div class="form-check-inline p-2">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inlineRadio1"
+              value="option1"
+              checked
+            />
+            <label class="form-check-label" for="inlineRadio1">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inlineRadio2"
+              value="option2"
+            />
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+        </div>
+      </div>
+      <div class="main-layout2-content3 card mt-3 mb-3">
+        <div class="layout2-header1 fw-bold bg-text-banner p-2 mb-3">
+          Process Diversion
+        </div>
+        <div class="main-layout2-content-3-checboxes p-2">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Flushing
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault"> HSH </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              High Super Heat
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              High Heat
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

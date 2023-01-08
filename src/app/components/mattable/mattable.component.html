@@ -1,0 +1,69 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <!-- Position Column -->
+    <ng-container matColumnDef="Select">
+      <th mat-header-cell *matHeaderCellDef>Select</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-radio-button [value]="element">{{
+          element.Select
+        }}</mat-radio-button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="ScdID">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="ScdID">ScdID</th>
+      <td mat-cell *matCellDef="let element">{{ element.ScdID }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="ScdiDLineNo">
+      <th mat-header-cell *matHeaderCellDef>ScdiDLineNo</th>
+      <td mat-cell *matCellDef="let element">{{ element.ScdiDLineNo }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="PlanGrade">
+      <th mat-header-cell *matHeaderCellDef>PlanGrade</th>
+      <td mat-cell *matCellDef="let element">{{ element.PlanGrade }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="RhRoute">
+      <th mat-header-cell *matHeaderCellDef>RhRoute</th>
+      <td mat-cell *matCellDef="let element">{{ element.RhRoute }}</td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="PlanWidth">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="PlanWidth">
+        PlanWidth
+      </th>
+      <td mat-cell *matCellDef="let element">{{ element.PlanWidth }}</td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="PlanThick">
+      <th mat-header-cell *matHeaderCellDef>PlanThick</th>
+      <td mat-cell *matCellDef="let element">{{ element.PlanThick }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Planneddate">
+      <th mat-header-cell *matHeaderCellDef>Planneddate</th>
+      <td mat-cell *matCellDef="let element">{{ element.Planneddate }}</td>
+    </ng-container>
+    <ng-container matColumnDef="HeatNo">
+      <th mat-header-cell *matHeaderCellDef>HeatNo</th>
+      <td mat-cell *matCellDef="let element">{{ element.HeatNo }}</td>
+    </ng-container>
+    <ng-container matColumnDef="HeatStatus">
+      <th mat-header-cell *matHeaderCellDef>HeatStatus</th>
+      <td mat-cell *matCellDef="let element">{{ element.HeatStatus }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[3, 6, 9]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>

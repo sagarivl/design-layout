@@ -8,3 +8,24 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.mat-table {
+  width: 100% !important;
+}
+tr.mat-header-row {
+  background-color: #2d7fc7 !important;
+}
+th.mat-header-cell {
+  border: 1px solid rgb(179, 174, 174);
+  padding: 10px !important;
+}
+td.mat-cell {
+  border: 1px solid rgb(160, 155, 155);
+  padding: 10px !important;
+}
+th.mat-header-cell {
+  color: #fff;
+}
+.mat-sort-header-arrow {
+  color: #fff;
+}

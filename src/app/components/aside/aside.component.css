@@ -1,0 +1,23 @@
+aside {
+  flex: 1;
+}
+.main-container {
+  width: 19rem;
+  margin-left: 29px;
+  margin-right: 17px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+}
+.btns-grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.bg-text-banner {
+  background: #dee2e6;
+  color: #5c87c6;
+}
+.btn-primary-custom {
+  background: #5c87c6;
+  color: #fff;
+}
