@@ -8,9 +8,20 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-.mat-table {
+/* table {
+  max-width: 100%;
+  overflow: auto;
+  display: block !important;
+} */
+.mat-elevation-z8 {
+  overflow: hidden;
+}
+.table-mat {
   width: 100% !important;
+  display: block;
+  overflow-x: auto;
+  max-width: 1003px;
+  margin-left: 24px;
 }
 tr.mat-header-row {
   background-color: #2d7fc7 !important;
@@ -28,4 +39,7 @@ th.mat-header-cell {
 }
 .mat-sort-header-arrow {
   color: #fff;
+}
+.mat-tab-body-content {
+  margin-left: 20px !important;
 }

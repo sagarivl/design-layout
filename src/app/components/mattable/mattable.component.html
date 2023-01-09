@@ -1,5 +1,8 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Filter" />
+</mat-form-field>
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" matSort>
+  <table mat-table [dataSource]="dataSource" matSort class="table-mat">
     <!-- Position Column -->
     <ng-container matColumnDef="Select">
       <th mat-header-cell *matHeaderCellDef>Select</th>
@@ -16,19 +19,19 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="ScdiDLineNo">
-      <th mat-header-cell *matHeaderCellDef>ScdiDLineNo</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ScdiDLineNo</th>
       <td mat-cell *matCellDef="let element">{{ element.ScdiDLineNo }}</td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="PlanGrade">
-      <th mat-header-cell *matHeaderCellDef>PlanGrade</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>PlanGrade</th>
       <td mat-cell *matCellDef="let element">{{ element.PlanGrade }}</td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="RhRoute">
-      <th mat-header-cell *matHeaderCellDef>RhRoute</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>RhRoute</th>
       <td mat-cell *matCellDef="let element">{{ element.RhRoute }}</td>
     </ng-container>
     <!-- Symbol Column -->
@@ -40,19 +43,19 @@
     </ng-container>
     <!-- Symbol Column -->
     <ng-container matColumnDef="PlanThick">
-      <th mat-header-cell *matHeaderCellDef>PlanThick</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>PlanThick</th>
       <td mat-cell *matCellDef="let element">{{ element.PlanThick }}</td>
     </ng-container>
     <ng-container matColumnDef="Planneddate">
-      <th mat-header-cell *matHeaderCellDef>Planneddate</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Planneddate</th>
       <td mat-cell *matCellDef="let element">{{ element.Planneddate }}</td>
     </ng-container>
     <ng-container matColumnDef="HeatNo">
-      <th mat-header-cell *matHeaderCellDef>HeatNo</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>HeatNo</th>
       <td mat-cell *matCellDef="let element">{{ element.HeatNo }}</td>
     </ng-container>
     <ng-container matColumnDef="HeatStatus">
-      <th mat-header-cell *matHeaderCellDef>HeatStatus</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>HeatStatus</th>
       <td mat-cell *matCellDef="let element">{{ element.HeatStatus }}</td>
     </ng-container>
 

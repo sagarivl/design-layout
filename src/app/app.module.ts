@@ -5,6 +5,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { AsideComponent } from './components/aside/aside.component';
 import { Article1Component } from './components/article1/article1.component';
 import { Article2Component } from './components/article2/article2.component';
 import { MattableComponent } from './components/mattable/mattable.component';
+import { MattableColspanComponent } from './components/mattable-colspan/mattable-colspan.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { MattableComponent } from './components/mattable/mattable.component';
     Article1Component,
     Article2Component,
     MattableComponent,
+    MattableColspanComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { MattableComponent } from './components/mattable/mattable.component';
     MatPaginatorModule,
     MatRadioModule,
     MatSortModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

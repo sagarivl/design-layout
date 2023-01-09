@@ -1,7 +1,8 @@
 .content {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  /* height: 100%; */
+  margin: 10px;
 }
 .content > .article-1 {
   flex: 3;
