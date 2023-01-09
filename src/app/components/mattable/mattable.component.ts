@@ -39,7 +39,7 @@ export class MattableComponent implements AfterViewInit {
       Select: '',
       ScdID: 67899,
       ScdiDLineNo: 2,
-      PlanGrade: 'JHBGVF',
+      PlanGrade: 'ghhgg',
       RhRoute: '',
       PlanWidth: 56,
       PlanThick: 798,
@@ -51,7 +51,7 @@ export class MattableComponent implements AfterViewInit {
       Select: '',
       ScdID: 78888,
       ScdiDLineNo: 1,
-      PlanGrade: 'JHBGHU',
+      PlanGrade: 'hhhh',
       RhRoute: '',
       PlanWidth: 454,
       PlanThick: 783,
@@ -63,7 +63,7 @@ export class MattableComponent implements AfterViewInit {
       Select: '',
       ScdID: 78888,
       ScdiDLineNo: 1,
-      PlanGrade: 'JHBGHU',
+      PlanGrade: 'oiijmn',
       RhRoute: '',
       PlanWidth: 454,
       PlanThick: 783,
@@ -112,8 +112,8 @@ export class MattableComponent implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
     console.log(this.dataSource);
   }
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  filterRow(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = value.trim().toLowerCase();
   }
 }
