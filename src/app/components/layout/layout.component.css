@@ -1,7 +1,6 @@
 .content {
   display: flex;
   flex-direction: row;
-  /* height: 100%; */
   margin: 10px;
 }
 .content > .article-1 {
@@ -28,20 +27,6 @@
 .content > .aside {
   flex: 1;
 }
-/* .content > aside {
-  flex: 1;
-}
-.main-container {
-  width: 19rem;
-  margin-left: 29px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
-}
-.btns-grp {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 20px;
-} */
 
 /* form layout */
 .form-layout {

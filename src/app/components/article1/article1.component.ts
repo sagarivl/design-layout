@@ -21,4 +21,11 @@ export class Article1Component implements OnInit {
     ' Dummy',
   ];
   arrayChecks = ['Tube Change', 'Buffle'];
+  checkboxes = [
+    'Flushing',
+    'HSH',
+    'High Super Heat',
+    'High Heat',
+    'High Super Heat',
+  ];
 }

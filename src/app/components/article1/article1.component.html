@@ -22,48 +22,51 @@
       <div class="form-layout">
         <div class="form-layout-1">
           <form>
-            <div class="row" *ngFor="let text of inputArray; index as i">
-              <div class="col-sm-4 mt-2">
+            <div
+              class="form3-inputbox"
+              *ngFor="let text of inputArray; index as i"
+            >
+              <div class="form3-inputbox-1 mt-2">
                 <label>{{ text }}</label>
               </div>
-              <div class="col-sm-7 mb-3">
+              <div class="form3-inputbox-2 mb-3">
                 <input type="text" class="form-control custom-color" />
               </div>
             </div>
             <div class="pt-2 pb-2" *ngFor="let chk of arrayChecks">
-              <label class="col-sm-4 me-2">{{ chk }}</label>
+              <label class="col-sm-3 me-3">{{ chk }}</label>
               <input class="form-check-input col-sm-7" type="checkbox" />
             </div>
           </form>
         </div>
         <div class="form-layout-2">
           <form>
-            <div class="row" *ngFor="let text of inputArray">
-              <div class="col-sm-4 mt-2">
+            <div class="form3-inputbox" *ngFor="let text of inputArray">
+              <div class="form3-inputbox-1 mx-3 mt-2">
                 <label>{{ text }}</label>
               </div>
-              <div class="col-sm-7 mb-3">
+              <div class="form3-inputbox-2 mb-3">
                 <input type="text" class="form-control" />
               </div>
             </div>
-            <div class="pt-2 pb-2" *ngFor="let chk of arrayChecks">
-              <label class="col-sm-4 me-2">{{ chk }}</label>
+            <div class="pt-2 pb-2 ms-3" *ngFor="let chk of arrayChecks">
+              <label class="col-sm-3 me-4">{{ chk }}</label>
               <input class="form-check-input col-sm-7" type="checkbox" />
             </div>
           </form>
         </div>
         <div class="form-layout-3">
           <form>
-            <div class="row" *ngFor="let text of inputArray">
-              <div class="col-sm-4 mt-2">
+            <div class="form3-inputbox" *ngFor="let text of inputArray">
+              <div class="form3-inputbox-1 mt-2">
                 <label>{{ text }}</label>
               </div>
-              <div class="col-sm-7 mb-3">
+              <div class="form3-inputbox-2 mb-3">
                 <input type="text" class="form-control" />
               </div>
             </div>
             <div class="pt-2 pb-2" *ngFor="let chk of arrayChecks">
-              <label class="col-sm-4 me-2">{{ chk }}</label>
+              <label class="col-sm-3 me-3">{{ chk }}</label>
               <input class="form-check-input col-sm-7" type="checkbox" />
             </div>
           </form>
@@ -134,7 +137,7 @@
           Process Diversion
         </div>
         <div class="main-layout2-content-3-checboxes p-2">
-          <div class="form-check">
+          <div class="form-check" *ngFor="let chk of checkboxes">
             <input
               class="form-check-input"
               type="checkbox"
@@ -142,10 +145,10 @@
               id="flexCheckDefault"
             />
             <label class="form-check-label" for="flexCheckDefault">
-              Flushing
+              {{ chk }}
             </label>
           </div>
-          <div class="form-check">
+          <!-- <div class="form-check">
             <input
               class="form-check-input"
               type="checkbox"
@@ -175,7 +178,7 @@
             <label class="form-check-label" for="flexCheckDefault">
               High Heat
             </label>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

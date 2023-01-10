@@ -40,3 +40,13 @@
   background: #5c87c6;
   color: #fff;
 }
+
+.form3-inputbox {
+  display: flex;
+}
+.form3-inputbox-1 {
+  width: 93px;
+}
+.form-layout-3 {
+  margin-left: 29px;
+}
