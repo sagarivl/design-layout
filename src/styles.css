@@ -43,3 +43,15 @@ th.mat-header-cell {
 .mat-tab-body-content {
   margin-left: 20px !important;
 }
+.mat-sort-header-content {
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+/* ::ng-deep
+  .mat-sort-header-container:not(.mat-sort-header-sorted)
+  .mat-sort-header-arrow {
+  opacity: 0.54 !important;
+  transform: translateY(0px) !important;
+} */

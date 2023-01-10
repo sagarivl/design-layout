@@ -1,6 +1,3 @@
-<mat-form-field>
-  <input matInput (keyup)="filterRow($event)" placeholder="Search here" />
-</mat-form-field>
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort class="table-mat">
     <!-- Position Column -->
@@ -13,19 +10,43 @@
       </td>
     </ng-container>
     <ng-container matColumnDef="ScdID">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="ScdID">ScdID</th>
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        class="head"
+        mat-sort-header="ScdID"
+      >
+        <span> ScdID</span>
+        <mat-form-field class="filter" floatLabel="never">
+          <mat-label>Search</mat-label>
+          <input matInput class="input-filter" [formControl]="nameFilter" />
+        </mat-form-field>
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.ScdID }}</td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="ScdiDLineNo">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>ScdiDLineNo</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        ScdiDLineNo
+        <mat-form-field class="filter" floatLabel="never">
+          <mat-label>Search</mat-label>
+          <input matInput [formControl]="idFilter" />
+        </mat-form-field>
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.ScdiDLineNo }}</td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="PlanGrade">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>PlanGrade</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        PlanGrade
+
+        <mat-form-field class="filter" floatLabel="never">
+          <mat-label>Search</mat-label>
+          <input matInput [formControl]="colourFilter" />
+        </mat-form-field>
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.PlanGrade }}</td>
     </ng-container>
 
@@ -38,12 +59,22 @@
     <ng-container matColumnDef="PlanWidth">
       <th mat-header-cell *matHeaderCellDef mat-sort-header="PlanWidth">
         PlanWidth
+        <mat-form-field class="filter" floatLabel="never">
+          <mat-label>Search</mat-label>
+          <input matInput [formControl]="petFilter" />
+        </mat-form-field>
       </th>
       <td mat-cell *matCellDef="let element">{{ element.PlanWidth }}</td>
     </ng-container>
     <!-- Symbol Column -->
     <ng-container matColumnDef="PlanThick">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>PlanThick</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        PlanThick
+        <mat-form-field class="filter" floatLabel="never">
+          <mat-label>Search</mat-label>
+          <input matInput [formControl]="petFilter" />
+        </mat-form-field>
+      </th>
       <td mat-cell *matCellDef="let element">{{ element.PlanThick }}</td>
     </ng-container>
     <ng-container matColumnDef="Planneddate">

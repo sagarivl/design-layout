@@ -2,6 +2,8 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import { FormControl } from '@angular/forms';
+
 export interface PeriodicElement {
   Select: string;
   ScdID: number;
@@ -100,13 +102,48 @@ export class MattableComponent implements AfterViewInit {
     'HeatNo',
     'HeatStatus',
   ];
-  dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
 
+  nameFilter = new FormControl('');
+  idFilter = new FormControl('');
+  colourFilter = new FormControl('');
+  petFilter = new FormControl('');
+  dataSource = new MatTableDataSource();
+  filterValues = {
+    ScdID: '',
+    ScdiDLineNo: '',
+    PlanGrade: '',
+    PlanWidth: '',
+    PlanThick: '',
+    HeatStatus: '',
+  };
+
+  //dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
+
+  constructor() {
+    this.dataSource.data = this.ELEMENT_DATA;
+    this.dataSource.filterPredicate = this.createFilter();
+  }
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   // ELEMENT_DATA: PeriodicElement[] | undefined;
   ngOnInit() {
     this.dataSource.sort = this.sort;
+    this.nameFilter.valueChanges.subscribe((name) => {
+      this.filterValues.ScdID = name;
+      this.dataSource.filter = JSON.stringify(this.filterValues);
+    });
+    this.idFilter.valueChanges.subscribe((id) => {
+      this.filterValues.ScdiDLineNo = id;
+      this.dataSource.filter = JSON.stringify(this.filterValues);
+    });
+    this.colourFilter.valueChanges.subscribe((colour) => {
+      this.filterValues.PlanGrade = colour;
+      this.dataSource.filter = JSON.stringify(this.filterValues);
+    });
+    this.petFilter.valueChanges.subscribe((pet) => {
+      this.filterValues.PlanWidth = pet;
+      this.dataSource.filter = JSON.stringify(this.filterValues);
+    });
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -115,5 +152,24 @@ export class MattableComponent implements AfterViewInit {
   filterRow(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     this.dataSource.filter = value.trim().toLowerCase();
+  }
+  createFilter(): (data: any, filter: string) => boolean {
+    let filterFunction = function (data: any, filter: any): boolean {
+      console.log('oooo', data);
+
+      let searchTerms = JSON.parse(filter);
+      console.log('searchTerms', searchTerms);
+      return (
+        data.ScdID.toString().toLowerCase().indexOf(searchTerms.ScdID) !== -1 &&
+        data.ScdiDLineNo.toString()
+          .toLowerCase()
+          .indexOf(searchTerms.ScdiDLineNo) !== -1 &&
+        data.PlanGrade.toLowerCase().indexOf(searchTerms.PlanGrade) !== -1 &&
+        data.PlanWidth.toString()
+          .toLowerCase()
+          .indexOf(searchTerms.PlanWidth) !== -1
+      );
+    };
+    return filterFunction;
   }
 }
